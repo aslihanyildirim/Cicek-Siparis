@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+    background-color: #4d5833;
+    color: white;
+    padding: 7px 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    transition: transform 0.3s ease;
+    background: url('../img/bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: 2px solid #798b4f;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 8px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #4d5833;
+    color: white;
+}
+
+.sidebar ul:hover > li:not(:hover) {
+  filter: blur(1px);
+  transform: scale(0.85);
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li {
+  transition: all 0.3s ease;
+}
+
+.sidebar.closed {
+  transform: translateX(-92%);
+}
+
+.sidebar-toggle {
+  background-color: #4d5833;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  padding: 10px 1px;
+  cursor: pointer;
+  border-radius: 10px;
+  z-index: 20;
+  position: fixed;
+  top: 25px;
+  left: 15px;
+
+}
+
+.product {
+  position: relative;
+  background-color: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  max-width: 230px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;    
+}
+
+.product:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+
+.product img {
+  width: 100%;
+  border-radius: 12px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.product .price {
+  font-size: 1.2em;
+  color: #4d5833;
+  font-weight: bold;
+}
+
+.product .discount-price {
+  font-size: 1.5em;
+  color: #e55b5b;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.product button:not(.favorite) {
+  background-color: #4d5833;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product button:hover {
+  background-color: #97a86f;
+  transform: scale(1.05);
+}
+
+
+.favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.6em;
+  cursor: pointer;
+  color: #bbb;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.favorite:hover {
+  transform: scale(1.2);
+  background-color: #f9cbd7;
+}
+
+.favorite.active {
+  color: white;
+  background-color: #f3d1d9;
+}
+
+#toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #738f62;
+  color: #fff;
+  padding: 10px 32px;
+  border-radius: 8px;
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+#toast.show {
+  opacity: 6;
+}

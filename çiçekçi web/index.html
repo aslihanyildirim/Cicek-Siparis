@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çiçekçi Dünyası</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/anasayfa.css">
+    <script src="js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+<header>
+    <marquee>Sevginizi Kanıtlamanın En Güzel Yolu. Şimdi Sevgililer Gününe Özel İndirimlerle!</marquee>
+</header>
+
+<div class="cookie-popup-overlay">
+    <div class="card">
+ 
+      <p class="cookieHeading">Çerezleri Kullanıyoruz.</p>
+      <p class="cookieDescription">Daha iyi bir deneyim için lütfen çerezleri onaylayın.</p>
+      <div class="buttonContainer"> 
+        <button class="acceptButton">İzin Ver</button>
+        <button class="declineButton">Daha Fazla Seçenek</button>
+      </div>
+    </div>
+  </div>
+
+  <button id="toggleSidebar" class="sidebar-toggle">☰</button>
+
+<aside class="sidebar">
+    <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="urunler.html">Ürünler</a></li>
+        <li><a href="sepet.html">Sepet</a></li>
+        <li><a href="favoriler.html">Favorileriniz </a></li>
+        <li><a href="login.html">Giriş Yap/Kaydol</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+</aside>
+
+<main>
+    <section class="hero">
+        <h2>Çiçeklerle Duygularınızı İfade Edin. </h2>
+        <p>Şimdi Sevgililer Gününe Özel İndirimlerle!</p>
+        <a href="urunler.html" class="cta-button">Ürünleri İncele</a>
+    </section>
+</main>
+
+<section class="categories">
+  <a href="urunler.html" class="category-card">Saksı Çiçekleri</a>
+  <a href="urunler.html" class="category-card">Buketler</a>
+  <a href="urunler.html" class="category-card">Sevgililer Günü Özel</a>
+  <a href="urunler.html" class="category-card">İletişim</a>
+</section>
+
+  <section class="about-us">
+    <h2>Hakkımızda</h2>
+    <p>Çiçek sadece bir hediye değil, duyguların ta kendisidir. Biz, Çiçekçi Dünyası olarak her demette bir hikâye taşırız. Sevgiyle büyütülen her çiçek, kalpten kalbe uzanan bir köprüdür.</p>
+  </section>
+
+<footer>
+    <p>&copy; 2025 Çiçekçi Dünyası. Tüm hakları saklıdır.</p>
+</footer>
+
+<script>
+  document.querySelector(".acceptButton").addEventListener("click", () => {
+    document.querySelector(".cookie-popup-overlay").style.display = "none";
+  });
+
+  document.querySelector(".declineButton").addEventListener("click", () => {
+    document.querySelector(".cookie-popup-overlay").style.display = "none";
+    window.location.href = "https://policies.google.com/technologies/cookies?hl=en-US";  
+  });
+</script>
+
+</body>
+</html>

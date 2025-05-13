@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Favoriler</title>
+    <link rel="stylesheet" href="css/favoriler.css">
+    <link rel="stylesheet" href="css/style.css">
+    <div id="toast" class="toast">Favorilere eklendi!</div>
+    <script src="js/main.js"></script>
+  </head>
+<body>
+
+  <header>
+    <h1>Favoriler</h1>
+  </header>
+  <button id="toggleSidebar" class="sidebar-toggle">☰</button>
+  <aside class="sidebar">
+    <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="urunler.html">Ürünler</a></li>
+        <li><a href="sepet.html">Sepet</a></li>
+        <li><a href="favoriler.html">Favorileriniz </a></li>
+        <li><a href="giris.php">Giriş Yap/Kaydol</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+  </aside>
+
+  <main style="margin-left: 200px; padding: 40px 20px;">
+    <div class="favorites-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 30px; margin-top: 20px;">
+    </div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ürünler</title>
+    <link rel="stylesheet" href="css/urunler.css">
+    <link rel="stylesheet" href="css/style.css">
+    <div id="toast" class="toast">Favorilere eklendi!</div>
+    <script src="js/main.js"></script>
+  </head>
+<body>
+
+  <header>
+    <marquee>Sevginizi Kanıtlamanın En Güzel Yolu. Şimdi Sevgililer Gününe Özel İndirimlerle!</marquee>
+  </header>
+  <button id="toggleSidebar" class="sidebar-toggle">☰</button>
+  <aside class="sidebar">
+    <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="urunler.html">Ürünler</a></li>
+        <li><a href="sepet.html">Sepet</a></li>
+        <li><a href="favoriler.html">Favorileriniz </a></li>
+        <li><a href="login.html">Giriş Yap/Kaydol</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+  </aside>
+
+  
+  <main>
+
+    <div class="product">
+      <button class="favorite">🤍</button>
+      <img src="img/load.png" alt="Pembe Güller">
+      <h3>Pembe Güller</h3>
+      <p class="price">800₺</p>
+      <p class="discount-price">1200₺</p>
+            <button onclick="sepeteEkle('Zambaklar', 130)">Sepete Ekle</button>
+      <div class="stars">
+      <span>⭐</span>
+      <span>⭐</span>
+      <span>⭐</span>
+  </div>
+  
+</div>
+    
+    </div>
+  </main>
+
+
+
+</body>
+</html>
